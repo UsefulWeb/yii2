@@ -31,7 +31,6 @@ class LoginForm extends Model
             ['password', 'validatePassword'],
         ];
     }
-
     /**
      * Validates the password.
      * This method serves as the inline validation for password.

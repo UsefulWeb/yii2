@@ -9,6 +9,7 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
+    'name' => 'MyNote',
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
@@ -45,6 +46,16 @@ return [
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
+                ],
+            ],
+        ],
+        'view' => [
+            'theme' => [
+                'class' => 'yii\base\Theme',
+                'basePath' => '@frontend/themes/adminlte',
+                'baseUrl' => '@frontend/themes/adminlte',
+                'pathMap' => [
+                    '@app/views' => '@frontend/themes/adminlte',
                 ],
             ],
         ],
